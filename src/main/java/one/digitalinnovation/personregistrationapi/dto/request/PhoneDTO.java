@@ -1,4 +1,4 @@
-/*package one.digitalinnovation.personregistrationapi.dto.request;
+package one.digitalinnovation.personregistrationapi.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,7 +8,7 @@ import one.digitalinnovation.personregistrationapi.enums.PhoneType;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Data
@@ -22,8 +22,7 @@ public class PhoneDTO {
     @Enumerated(EnumType.STRING)
     private PhoneType type;
 
-    @NotEmpty
+    @NotNull
     @Size(min = 13, max = 14)
     private String number;
 }
-*/
